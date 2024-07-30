@@ -44,7 +44,7 @@ void push(Stack* s, int value) {
         }
         s->data = newData;
     }
-    s->data[++(s->sp)] = value;
+    s->data[++s->sp] = value;
 }
 
 int pop(Stack* s) {
@@ -52,7 +52,7 @@ int pop(Stack* s) {
         perror("Stack underflow");
         exit(1);
     }
-    return s->data[(s->sp)--];
+    return s->data[s->sp--];
 }
 
 int top(Stack* s) {
